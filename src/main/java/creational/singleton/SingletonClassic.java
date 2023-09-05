@@ -1,14 +1,14 @@
 package creational.singleton;
 
 public class SingletonClassic {
-    private static Object object;
+    private static Object singletonObject;
 
     private SingletonClassic() {}
 
-    public static synchronized Object generate() {
-        if (object == null) {
-            object = new Object();
+    public static synchronized Object getInstance() {
+        if (singletonObject == null) {
+            singletonObject = new Object();
         }
-        return object;
+        return singletonObject;
     }
 }
